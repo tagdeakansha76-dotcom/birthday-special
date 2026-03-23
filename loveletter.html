@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Love Letter</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+font-family:Arial;
+overflow:hidden;
+}
+
+/* envelope */
+
+.envelope{
+position:relative;
+width:500px;
+height:500px;
+cursor:pointer;
+z-index:2;
+}
+
+.base{
+width:100%;
+height:100%;
+background:#ff4d6d;
+border-radius:10px;
+position:absolute;
+}
+
+.flap{
+position:absolute;
+top:0;
+width:0;
+height:0;
+border-left:150px solid transparent;
+border-right:150px solid transparent;
+border-bottom:100px solid #ff758c;
+transform-origin:top;
+transition:0.5s;
+}
+
+/* letter */
+
+.letter{
+position:absolute;
+width:500px;
+background:white;
+padding:15px;
+border-radius:10px;
+top:50px;
+left:20px;
+text-align:center;
+transform:translateY(100px);
+transition:0.5s;
+opacity:0;
+}
+
+.envelope.open .flap{
+transform:rotateX(180deg);
+}
+
+.envelope.open .letter{
+transform:translateY(-20px);
+opacity:1;
+}
+
+/* hearts */
+
+.heart{
+position:absolute;
+color:red;
+font-size:20px;
+animation:float 4s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh); opacity:1;}
+100%{transform:translateY(-10vh); opacity:0;}
+}
+/* right side button box */
+
+.button-box{
+background:hsl(0, 60%, 75%);
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+display:flex;
+flex-direction:column;
+gap:15px;
+position:absolute;
+top:20px;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+
+}
+
+/* buttons */
+
+.button-box button{
+padding:12px 25px;
+border:none;
+border-radius:8px;
+background:hsl(349, 92%, 50%);
+color:rgb(14, 12, 12);
+font-size:16px;
+cursor:pointer;
+}
+
+.button-box button:hover{
+background:#ff2e55;
+}
+
+h2{
+color:#ff4d6d;
+}
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-family:Arial;
+
+/* background image */
+background:url("akanksha/yash4.jpg") no-repeat center center/cover;
+
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="envelope" onclick="openLetter(this)">
+<div class="flap"></div>
+<div class="base"></div>
+
+<div class="letter">
+<h2>💌 My Love</h2>
+<p id="text"></p>
+</div>
+</div>
+<!-- right side buttons -->
+
+<div class="button-box">
+
+<a href="menu.html" class="btn">⬅ Back</a>
+
+</div>
+
+
+</div>
+<script>
+
+let message = "My Love ❤️Aaj ka din mere liye bahut special hai, kyunki aaj tumhara birthday hai… aur is duniya mein tumse zyada special mere liye koi nahi hai. 💖Jab tum meri life mein aaye the na, tab mujhe realize hua ki “khush rehna” actually kya hota hai. Tumhari smile, tumhari baatein, tumhara care karna — sab kuch mere dil ko itna sukoon deta hai ki main words mein properly express bhi nahi kar paati.Tum sirf mere boyfriend nahi ho… tum mere best friend ho, meri habit ho, meri aadat ho… aur sach kahu to meri duniya ho. 🌍💫Jab bhi main thodi upset hoti hu, tumhara ek “arey kya hua baby” bolna hi mujhe theek kar deta hai. Itna special feel karvate ho tum mujhe.Mujhe tumhari har ek choti choti baat pasand hai — tumhara gussa, tumhari caring nature, tumhara possessiveness… sab kuch. Shayad perfect koi nahi hota, par mere liye tum bilkul perfect ho. 💕Main chahti hu ki tum hamesha aise hi haste raho, khush raho… aur life mein jo bhi chaho, sab tumhe mile. Main hamesha tumhare saath rahungi — har situation mein, har problem mein, har khushi mein. Tum akela kabhi nahi ho, ye yaad rakhna.Aur haan… thank you itna pyar dene ke liye, itna samajhne ke liye, aur meri life ko itna beautiful banane ke liye. Tumne meri life ko ek nayi meaning di hai.I love you itna ki shayad main kabhi words mein pura explain hi nahi kar paungi… par haan, har din tumse aur zyada pyaar ho jata hai. 💞wish you many many HAPPY BRITHDAY YASHHHHHHHHH 🎂🎉❤️"
+let i = 0;
+
+function typeText(){
+if(i < message.length){
+document.getElementById("text").innerHTML += message.charAt(i);
+i++;
+setTimeout(typeText,40);
+}
+}
+
+function openLetter(el){
+
+el.classList.toggle("open");
+
+/* start typing after open */
+setTimeout(typeText,500);
+
+/* hearts */
+for(let j=0; j<20; j++){
+let heart = document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(2+Math.random()*3)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{ heart.remove(); },4000);
+}
+
+}
+
+</script>
+
+</body>
+</html>

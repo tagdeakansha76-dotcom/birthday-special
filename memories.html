@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Memories 💖</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+}
+
+/* heading */
+
+h1{
+text-align:center;
+color:white;
+padding:20px;
+}
+
+/* timeline */
+
+.timeline{
+position:relative;
+max-width:800px;
+margin:auto;
+padding:20px 0;
+}
+
+/* center line */
+
+.timeline::after{
+content:'';
+position:absolute;
+width:4px;
+background:white;
+top:0;
+bottom:0;
+left:50%;
+margin-left:-2px;
+}
+
+/* container */
+
+.container{
+padding:20px 30px;
+position:relative;
+width:50%;
+}
+
+/* left */
+
+.left{
+left:0;
+}
+
+/* right */
+
+.right{
+left:50%;
+}
+
+/* box */
+
+.content{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* image */
+
+.content img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+/* circles */
+
+.container::after{
+content:'❤️';
+position:absolute;
+top:20px;
+right:-12px;
+font-size:18px;
+}
+
+.right::after{
+left:-12px;
+}
+
+/* text */
+
+.content p{
+margin:0;
+color:#ff4d6d;
+font-weight:bold;
+}
+
+/* button */
+
+.button-box{
+position:absolute;
+top:20px;
+right:20px;
+}
+
+.btn{
+padding:10px 20px;
+background:#ff4d6d;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+.btn:hover{
+background:#ff2e55;
+}
+
+/* mobile */
+
+@media screen and (max-width:600px){
+
+.timeline::after{
+left:20px;
+}
+
+.container{
+width:100%;
+padding-left:50px;
+padding-right:20px;
+}
+
+.right{
+left:0;}
+}
+.memory-gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+gap:15px;
+padding:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.mem-box{
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 10px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.mem-box img{
+width: 150px;;
+height:150px;
+object-fit:cover;
+display:block;
+}
+
+.mem-box:hover{
+transform:scale(1.08);
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+
+  /* background image */
+  background: url("akanksha/lion.jpg") no-repeat center center;
+  background-size: cover;
+
+  min-height: 100vh;   /* height fix */
+}
+</style>
+</head>
+<body>
+
+<h1>💖 A STORY THAT STARTED WITH A SMILE 💖</h1>
+
+<div class="button-box">
+<a href="menu.html" class="btn">⬅ Back</a>
+</div>
+
+<div class="timeline">
+
+<div class="container left">
+<div class="content">
+<img src="akanksha/me.jpeg">
+<p>💕 Loving You Is the easiest thing
+     i've even done</p>
+</div>
+</div>
+
+<div class="container right">
+<div class="content">
+<img src="akanksha/me2.jpeg">
+<p>📸I didn't belive in perfect
+     unitl i met you  </p>
+</div>
+</div>
+
+<div class="container left">
+<div class="content">
+<img src="akanksha/me7.jpeg">
+<p>🎉 You're the reason behind 
+    my smile every day</p>
+</div>
+</div>
+
+<div class="container right">
+<div class="content">
+<img src="akanksha/me8.jpeg">
+<p>💖 Every moment with you 
+    feel special
+</p>
+</div>
+</div>
+
+<div class="container left">
+<div class="content">
+<img src="akanksha/me5.jpeg">
+<p>🌹 I'm so lucky to have someone like you in my love </p>
+</div>
+</div>
+
+</div>
+<h2 style="text-align:center; color:white;">💞 More Memories 💞</h2>
+
+<div class="memory-gallery">
+
+<div class="mem-box"><img src="akanksha/me4.jpeg"></div>
+<div class="mem-box"><img src="akanksha/me3.jpeg"></div>
+<div class="mem-box"><img src="akanksha/00.jpeg"></div>
+<div class="mem-box"><img src="akanksha/001.jpeg"></div>
+<div class="mem-box"><img src="akanksha/002.jpeg"></div>
+<div class="mem-box"><img src="akanksha/003.jpeg"></div>
+<div class="mem-box"><img src="akanksha/004.jpeg"></div>
+<div class="mem-box"><img src="akanksha/005.jpeg"></div>
+<div class="mem-box"><img src="akanksha/006.jpeg"></div>
+
+</div>
+

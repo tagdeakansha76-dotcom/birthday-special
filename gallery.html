@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gallery 💖</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+text-align:center;
+}
+
+/* heading */
+
+h1{
+color:white;
+margin-top:20px;
+}
+
+/* gallery grid */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+gap:20px;
+padding:30px;
+}
+
+/* image box */
+
+.img-box{
+background:white;
+padding:10px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.img-box:hover{
+transform:scale(1.05);
+}
+
+/* images */
+
+.img-box img{
+width:100%;
+border-radius:10px;
+}
+
+/* caption */
+
+.caption{
+margin-top:10px;
+color:#ff4d6d;
+font-weight:bold;
+}
+
+/* button box */
+
+.button-box{
+position:absolute;
+top:20px;
+right:20px;
+}
+
+/* back button */
+
+.btn{
+padding:10px 20px;
+background:#ff4d6d;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+.btn:hover{
+background:#ff2e55;
+}
+
+
+
+/* more gallery */
+
+.more-gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.box{
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 10px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.box img{
+width:120%;
+height:220px;
+object-fit:cover;
+}
+
+.box:hover{
+    transform:scale(1.08);}
+
+.image-box-section{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(160px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.img-card{
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.img-card img{
+width:120%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+.img-card:hover{
+transform:scale(1.07);
+}
+body {
+  margin: 0;
+  font-family: Arial;
+
+  /* background image */
+  background: url("akanksha/9.jpg") no-repeat center center;
+  background-size: cover;
+
+  min-height: 100vh;   /* height fix */
+}
+
+.slideshow{
+width:90%;
+height:450px;
+margin:40px auto;
+position:relative;
+overflow:hidden;
+border-radius:15px;
+}
+
+/* slides */
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+top:0;
+left:100%;   /* sab right se start honge */
+transition:1s;
+}
+
+
+
+/* active slide center me */
+.slide.active{
+left:0;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<h1>📸 FRAME OF LOVE 💖</h1>
+
+<!-- back button -->
+<div class="button-box">
+<a href="menu.html" class="btn">⬅ Back</a>
+</div>
+
+<!-- gallery -->
+
+<div class="gallery">
+
+<div class="img-box">
+<img src="akanksha/4.jpeg">
+<div class="caption">How to you manage to look so handsome all the time? 💕</div>
+</div>
+
+<div class="img-box">
+<img src="akanksha/h4.jpeg">
+<div class="caption">You's dangerously attractive you know that? 💖</div>
+</div>
+
+<div class="img-box">
+<img src="akanksha/h1.jpeg">
+<div class="caption">If being handsome was a crime,you'd be in jail by now❤️</div>
+</div>
+
+<div class="img-box">
+<img src="akanksha/3.jpeg">
+<div class="caption">i think your smile is my new weakness 😍</div>
+</div>
+</div>
+
+<div class="slideshow">
+
+  <img class="slide active" src="akanksha/hhh.jpeg">
+  <img class="slide" src="akanksha/hhhh.jpeg">
+  <img class="slide" src="akanksha/hhhh.jpeg">
+
+</div>
+
+<h2 style="color:white;">💞 MY PERSON 💞</h2>
+
+<div class="more-gallery">
+
+<div class="box"><img src="akanksha/1.jpeg"></div>
+<div class="box"><img src="akanksha/2.jpeg"></div>
+<div class="box"><img src="akanksha/3.jpeg"></div>
+<div class="box"><img src="akanksha/4.jpeg"></div>
+<div class="box"><img src="akanksha/5.jpeg"></div>
+<div class="box"><img src="akanksha/6.jpeg"></div>
+<div class="box"><img src="akanksha/7.jpeg"></div>
+<div class="box"><img src="akanksha/8.jpeg"></div>
+<div class="img-card"><img src="akanksha/h1.jpeg"></div>
+<div class="img-card"><img src="akanksha/h2.jpeg"></div>
+<div class="img-card"><img src="akanksha/h3.jpeg"></div>
+<div class="img-card"><img src="akanksha/h5.jpeg"></div>
+<div class="img-card"><img src="akanksha/h4.jpeg"></div>
+<div class="img-card"><img src="akanksha/h6.jpeg"></div>
+<div class="img-card"><img src="akanksha/h7.jpeg"></div>
+<div class="img-card"><img src="akanksha/h8.jpeg"></div>
+
+
+
+</div>
+</body>
+</html>

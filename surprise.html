@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Final Surprise 💖</title>
+
+<style>
+
+.heart{
+  position:absolute;
+  color:#ff4d6d;
+  font-size:20px;
+  animation:floatUp 5s linear infinite;
+}
+
+@keyframes floatUp{
+  0%{
+    transform:translateY(0);
+    opacity:1;
+  }
+  100%{
+    transform:translateY(-100vh);
+    opacity:0;
+  }
+}
+.cake{
+  font-size:80px;
+  margin-top:20px;
+  animation:pop 1.5s ease;
+}
+
+@keyframes pop{
+  from{ transform:scale(0); }
+  to{ transform:scale(1); }
+}
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:black;
+overflow:hidden;
+font-family:Arial;
+}
+
+/* text */
+
+h1{
+color:white;
+font-size:60px;
+animation:glow 2s infinite alternate;
+}
+
+/* glow effect */
+
+@keyframes glow{
+from{ text-shadow:0 0 10px #ff4d6d; }
+to{ text-shadow:0 0 30px #ff99aa, 0 0 50px #ff4d6d; }
+}
+
+/* fireworks */
+
+.firework{
+position:absolute;
+width:5px;
+height:5px;
+background:white;
+border-radius:50%;
+animation:explode 1s ease-out forwards;
+}
+
+@keyframes explode{
+0%{
+transform:translate(0,0);
+opacity:1;
+}
+100%{
+transform:translate(var(--x), var(--y));
+opacity:0;
+}
+}
+
+/* button */
+
+.button-box{
+position:absolute;
+top:20px;
+right:20px;
+}
+
+.btn{
+padding:10px 20px;
+background:#ff4d6d;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+.btn:hover{
+background:#ff2e55;
+}
+
+</style>
+</head>
+
+<body><audio autoplay loop>
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<h1>💖 I LOVE YOU 💖</h1>
+<div class="cake">🎂</div>
+
+<div class="button-box">
+<a href="menu.html" class="btn">⬅ Back</a>
+</div>
+
+<script>
+
+/* fireworks */
+
+function createFirework(){
+
+let x = Math.random() * window.innerWidth;
+let y = Math.random() * window.innerHeight;
+
+for(let i=0; i<30; i++){
+let fw = document.createElement("div");
+fw.className="firework";
+
+fw.style.left = x + "px";
+fw.style.top = y + "px";
+
+let angle = Math.random() * 360;
+let distance = Math.random() * 100;
+
+fw.style.setProperty('--x', Math.cos(angle) * distance + 'px');
+fw.style.setProperty('--y', Math.sin(angle) * distance + 'px');
+
+document.body.appendChild(fw);
+
+setTimeout(()=>{ fw.remove(); },1000);
+}
+
+}
+
+/* auto fireworks */
+
+setInterval(createFirework,800);
+
+</script>
+
+</body>
+</html>

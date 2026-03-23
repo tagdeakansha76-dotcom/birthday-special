@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday</title>
+
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-family:Arial;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+text-align:center;
+}
+
+h1{
+color:white;
+font-size:50px;
+}
+
+button{
+padding:15px 30px;
+border:none;
+border-radius:10px;
+background:#ff4d6d;
+color:white;
+font-size:20px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff2e55;
+}
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-family:Arial;
+
+/* background image */
+background:url("akanksha/yash.jpg") no-repeat center center/cover;
+
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎉 Happy Birthday My Love ❤️</h1>
+
+<button onclick="startConfetti()">Enter Surprise 🎁</button>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+
+function startConfetti(){
+
+confetti({
+particleCount:200,
+spread:120,
+origin:{y:0.6}
+});
+
+setTimeout(function(){
+window.location.href="menu.html";
+},1500);
+
+}
+
+</script>
+
+</body>
+</html>
